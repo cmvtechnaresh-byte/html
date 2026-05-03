@@ -1777,8 +1777,8 @@
           </p>
           <div class="eeat-stat-row">
             <div class="eeat-stat">
-              <div class="num">200+</div>
-              <div class="label">Countries Covered</div>
+              <div class="num">68</div>
+              <div class="label">Cities Covered</div>
             </div>
             <div class="eeat-stat">
               <div class="num">4.8★</div>
@@ -1937,6 +1937,73 @@
           </div>
         </div>
       </div>
+
+      <!-- Write a Review -->
+      <div style="margin-top:48px; background:var(--white); border:1px solid #E5E5DE; border-radius:20px; padding:36px 40px; box-shadow:0 4px 24px rgba(0,0,0,0.06);">
+        <div style="text-align:center; margin-bottom:28px;">
+          <span style="font-size:1.4rem;">✍️</span>
+          <h3 style="font-family:'DM Sans',sans-serif; font-size:1.2rem; font-weight:700; color:var(--green-deep); margin:8px 0 6px;">Share Your Hajj &amp; Umrah Experience</h3>
+          <p style="font-size:0.87rem; color:var(--ink-soft);">Your review helps fellow pilgrims choose the right eSIM plan.</p>
+        </div>
+
+        <!-- Star Rating Selector -->
+        <div style="text-align:center; margin-bottom:24px;">
+          <p style="font-size:0.85rem; font-weight:600; color:var(--green-deep); margin-bottom:10px;">Your Rating</p>
+          <div id="star-rating" style="display:flex; justify-content:center; gap:8px; font-size:2rem; cursor:pointer;">
+            <span class="star" data-val="1" style="color:#D0D0C8; transition:color 0.15s;">★</span>
+            <span class="star" data-val="2" style="color:#D0D0C8; transition:color 0.15s;">★</span>
+            <span class="star" data-val="3" style="color:#D0D0C8; transition:color 0.15s;">★</span>
+            <span class="star" data-val="4" style="color:#D0D0C8; transition:color 0.15s;">★</span>
+            <span class="star" data-val="5" style="color:#D0D0C8; transition:color 0.15s;">★</span>
+          </div>
+          <input type="hidden" id="rating-val" value="0">
+        </div>
+
+        <form id="review-form" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" onsubmit="submitReview(event)">
+          <div>
+            <label style="font-size:0.82rem; font-weight:600; color:var(--green-deep); display:block; margin-bottom:6px;">Your Name *</label>
+            <input type="text" id="rev-name" required placeholder="e.g. Ahmad M." style="width:100%; padding:10px 14px; border:1.5px solid #DDD; border-radius:10px; font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; box-sizing:border-box; transition:border 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#DDD'">
+          </div>
+          <div>
+            <label style="font-size:0.82rem; font-weight:600; color:var(--green-deep); display:block; margin-bottom:6px;">Country</label>
+            <input type="text" id="rev-country" placeholder="e.g. UK, Malaysia" style="width:100%; padding:10px 14px; border:1.5px solid #DDD; border-radius:10px; font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; box-sizing:border-box; transition:border 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#DDD'">
+          </div>
+          <div>
+            <label style="font-size:0.82rem; font-weight:600; color:var(--green-deep); display:block; margin-bottom:6px;">Trip Type</label>
+            <select id="rev-trip" style="width:100%; padding:10px 14px; border:1.5px solid #DDD; border-radius:10px; font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; box-sizing:border-box; background:white; transition:border 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#DDD'">
+              <option value="">Select trip type</option>
+              <option>Hajj 2025</option>
+              <option>Hajj 2026</option>
+              <option>Umrah</option>
+              <option>Umrah — Ramadan</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size:0.82rem; font-weight:600; color:var(--green-deep); display:block; margin-bottom:6px;">Plan Used</label>
+            <select id="rev-plan" style="width:100%; padding:10px 14px; border:1.5px solid #DDD; border-radius:10px; font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; box-sizing:border-box; background:white; transition:border 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#DDD'">
+              <option value="">Select plan</option>
+              <option>Free 1GB Starter</option>
+              <option>Hajj Unlimited ($7.50)</option>
+              <option>Umrah Flex</option>
+            </select>
+          </div>
+          <div style="grid-column:1/-1;">
+            <label style="font-size:0.82rem; font-weight:600; color:var(--green-deep); display:block; margin-bottom:6px;">Your Review *</label>
+            <textarea id="rev-text" required rows="4" placeholder="Share your experience with Konttigo eSIM during Hajj or Umrah..." style="width:100%; padding:12px 14px; border:1.5px solid #DDD; border-radius:10px; font-size:0.9rem; font-family:'DM Sans',sans-serif; outline:none; resize:vertical; box-sizing:border-box; transition:border 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#DDD'"></textarea>
+          </div>
+          <div style="grid-column:1/-1; text-align:center;">
+            <button type="submit" style="background:var(--green-deep); color:white; border:none; padding:14px 40px; border-radius:12px; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; transition:background 0.2s, transform 0.15s;" onmouseover="this.style.background='var(--green-mid)'" onmouseout="this.style.background='var(--green-deep)'">
+              Submit My Review →
+            </button>
+          </div>
+        </form>
+        <div id="review-success" style="display:none; text-align:center; padding:24px;">
+          <div style="font-size:2.5rem;">🕋</div>
+          <h4 style="color:var(--green-deep); font-family:'DM Sans',sans-serif; margin:12px 0 6px;">JazakAllah Khair!</h4>
+          <p style="color:var(--ink-soft); font-size:0.9rem;">Thank you for sharing your experience. Your review helps fellow pilgrims.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -2159,6 +2226,33 @@
   </footer>
 
 <script>lucide.createIcons();</script>
+<script>
+  // Star rating interaction
+  const stars = document.querySelectorAll('.star');
+  const ratingVal = document.getElementById('rating-val');
+  stars.forEach(star => {
+    star.addEventListener('mouseover', () => {
+      const v = +star.dataset.val;
+      stars.forEach(s => s.style.color = +s.dataset.val <= v ? 'var(--gold)' : '#D0D0C8');
+    });
+    star.addEventListener('mouseout', () => {
+      const cur = +ratingVal.value;
+      stars.forEach(s => s.style.color = +s.dataset.val <= cur ? 'var(--gold)' : '#D0D0C8');
+    });
+    star.addEventListener('click', () => {
+      ratingVal.value = star.dataset.val;
+      const cur = +ratingVal.value;
+      stars.forEach(s => s.style.color = +s.dataset.val <= cur ? 'var(--gold)' : '#D0D0C8');
+    });
+  });
+
+  // Review form submit
+  function submitReview(e) {
+    e.preventDefault();
+    document.getElementById('review-form').style.display = 'none';
+    document.getElementById('review-success').style.display = 'block';
+  }
+</script>
 </body>
 
 </html>
