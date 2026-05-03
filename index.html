@@ -1418,17 +1418,24 @@
 
     /* ===== 68 CITIES POPUP ===== */
     #cities-modal {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
       position: fixed;
       inset: 0;
       z-index: 9999;
       background: rgba(10,30,20,0.72);
-      backdrop-filter: blur(6px);
+      display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
+      transition: opacity 0.25s, visibility 0.25s;
     }
-    #cities-modal.open { display: flex; }
+    #cities-modal.open {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
     .cities-modal-box {
       background: #fff;
       border-radius: 24px;
