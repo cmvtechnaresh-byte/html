@@ -1415,10 +1415,204 @@
     .delay-4 {
       animation-delay: 0.4s;
     }
+
+    /* ===== 68 CITIES POPUP ===== */
+    #cities-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(10,30,20,0.72);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #cities-modal.open { display: flex; }
+    .cities-modal-box {
+      background: #fff;
+      border-radius: 24px;
+      max-width: 720px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+      animation: fadeUp 0.3s ease both;
+    }
+    .cities-modal-header {
+      position: sticky;
+      top: 0;
+      background: var(--green-deep);
+      color: white;
+      padding: 22px 28px 18px;
+      border-radius: 24px 24px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cities-modal-header h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .cities-modal-header p {
+      font-size: 0.82rem;
+      opacity: 0.72;
+      margin: 4px 0 0;
+    }
+    .cities-close-btn {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .cities-close-btn:hover { background: rgba(255,255,255,0.3); }
+    .cities-search {
+      padding: 16px 28px 0;
+    }
+    .cities-search input {
+      width: 100%;
+      padding: 10px 16px;
+      border: 1.5px solid #DDD;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      box-sizing: border-box;
+      transition: border 0.2s;
+    }
+    .cities-search input:focus { border-color: var(--gold); }
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 20px 28px 28px;
+    }
+    .city-tag {
+      background: var(--cream);
+      border: 1px solid rgba(201,152,42,0.2);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.83rem;
+      color: var(--green-deep);
+      font-family: 'DM Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .city-tag::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .city-tag.highlight {
+      background: rgba(201,152,42,0.12);
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+    @media (max-width: 600px) {
+      .cities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- 68 CITIES POPUP MODAL -->
+  <div id="cities-modal" role="dialog" aria-modal="true" aria-labelledby="cities-modal-title" onclick="closeCitiesPopupOutside(event)">
+    <div class="cities-modal-box">
+      <div class="cities-modal-header">
+        <div>
+          <h3 id="cities-modal-title">🌐 68 Cities Covered in Saudi Arabia</h3>
+          <p>Konttigo eSIM connects via STC, Network &amp; Zain across Saudi Arabia</p>
+        </div>
+        <button class="cities-close-btn" onclick="closeCitiesPopup()" aria-label="Close">✕</button>
+      </div>
+      <div class="cities-search">
+        <input type="text" id="city-search" placeholder="🔍 Search a city..." oninput="filterCities(this.value)">
+      </div>
+      <div class="cities-grid" id="cities-grid">
+        <div class="city-tag highlight">Makkah (Mecca)</div>
+        <div class="city-tag highlight">Madinah (Medina)</div>
+        <div class="city-tag highlight">Jeddah</div>
+        <div class="city-tag highlight">Mina (Tent City)</div>
+        <div class="city-tag highlight">Mount Arafat</div>
+        <div class="city-tag highlight">Muzdalifah</div>
+        <div class="city-tag highlight">Masjid Al-Haram</div>
+        <div class="city-tag highlight">Masjid Al-Nabawi</div>
+        <div class="city-tag highlight">Jabal Al-Nour</div>
+        <div class="city-tag">Riyadh</div>
+        <div class="city-tag">Dammam</div>
+        <div class="city-tag">Al Khobar</div>
+        <div class="city-tag">Dhahran</div>
+        <div class="city-tag">Tabuk</div>
+        <div class="city-tag">Abha</div>
+        <div class="city-tag">Khamis Mushait</div>
+        <div class="city-tag">Taif</div>
+        <div class="city-tag">Buraydah</div>
+        <div class="city-tag">Unaizah</div>
+        <div class="city-tag">Hail</div>
+        <div class="city-tag">Najran</div>
+        <div class="city-tag">Jizan</div>
+        <div class="city-tag">Yanbu</div>
+        <div class="city-tag">Al Jubail</div>
+        <div class="city-tag">Al Ahsa</div>
+        <div class="city-tag">Hafar Al-Batin</div>
+        <div class="city-tag">Sakakah</div>
+        <div class="city-tag">Arar</div>
+        <div class="city-tag">Al Qatif</div>
+        <div class="city-tag">Khobar</div>
+        <div class="city-tag">Qassim</div>
+        <div class="city-tag">Dawadmi</div>
+        <div class="city-tag">Rabigh</div>
+        <div class="city-tag">Thuwal</div>
+        <div class="city-tag">Al Ula</div>
+        <div class="city-tag">Dumat Al Jandal</div>
+        <div class="city-tag">Sharurah</div>
+        <div class="city-tag">Bishah</div>
+        <div class="city-tag">Al Bahah</div>
+        <div class="city-tag">Baljurashi</div>
+        <div class="city-tag">Dhurma</div>
+        <div class="city-tag">Ranyah</div>
+        <div class="city-tag">Al Majma'ah</div>
+        <div class="city-tag">Zulfi</div>
+        <div class="city-tag">Shaqra</div>
+        <div class="city-tag">Afif</div>
+        <div class="city-tag">Al Kharj</div>
+        <div class="city-tag">Haradh</div>
+        <div class="city-tag">Abqaiq</div>
+        <div class="city-tag">Ras Tanura</div>
+        <div class="city-tag">Al Mubarraz</div>
+        <div class="city-tag">Hofuf</div>
+        <div class="city-tag">King Abdullah City</div>
+        <div class="city-tag">King Khalid City</div>
+        <div class="city-tag">Khaybar</div>
+        <div class="city-tag">Badr</div>
+        <div class="city-tag">Wadi Ad-Dawasir</div>
+        <div class="city-tag">Al Qunfudhah</div>
+        <div class="city-tag">Al Lith</div>
+        <div class="city-tag">Samtah</div>
+        <div class="city-tag">Sabya</div>
+        <div class="city-tag">Abu Arish</div>
+        <div class="city-tag">Farasan Islands</div>
+        <div class="city-tag">Umluj</div>
+        <div class="city-tag">Tayma</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Announcement Bar -->
   <div class="announce-bar" role="banner">
@@ -1779,9 +1973,9 @@
             Therefore, our Hajj &amp; Umrah eSIM data plans are designed specifically around pilgrims' needs: flexible 1GB to 50GB, 1 to 30 days, and even unlimited data eSIM plans, so you can focus entirely on your worship, not your Wi-Fi.
           </p>
           <div class="eeat-stat-row">
-            <div class="eeat-stat">
-              <div class="num">68</div>
-              <div class="label">Cities Covered</div>
+            <div class="eeat-stat" onclick="openCitiesPopup()" style="cursor:pointer;" title="View all 68 cities">
+              <div class="num" style="text-decoration:underline dotted var(--gold); text-underline-offset:4px;">68</div>
+              <div class="label">Cities Covered <span style="font-size:0.75rem; color:var(--gold);">↗</span></div>
             </div>
             <div class="eeat-stat">
               <div class="num">4.8★</div>
@@ -1894,9 +2088,9 @@
               style="font-family:'Lora',serif; font-size:1.8rem; font-weight:700; color:var(--green-deep);">3,200+</span>
             <div style="font-size:0.82rem; color:var(--ink-soft);">Pilgrims Connected</div>
           </div>
-          <div><span
-              style="font-family:'Lora',serif; font-size:1.8rem; font-weight:700; color:var(--green-deep);">200+</span>
-            <div style="font-size:0.82rem; color:var(--ink-soft);">Countries Covered</div>
+          <div>
+            <span onclick="openCitiesPopup()" style="font-family:'Lora',serif; font-size:1.8rem; font-weight:700; color:var(--green-deep); cursor:pointer; text-decoration:underline dotted var(--gold); text-underline-offset:4px;">68</span>
+            <div style="font-size:0.82rem; color:var(--ink-soft);">Cities Covered &nbsp;<span onclick="openCitiesPopup()" style="color:var(--gold); cursor:pointer; font-size:0.78rem;">(view all ↗)</span></div>
           </div>
         </div>
       </div>
@@ -2255,6 +2449,31 @@
     document.getElementById('review-form').style.display = 'none';
     document.getElementById('review-success').style.display = 'block';
   }
+
+  // 68 Cities popup
+  function openCitiesPopup() {
+    document.getElementById('cities-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('city-search').value = '';
+    filterCities('');
+  }
+  function closeCitiesPopup() {
+    document.getElementById('cities-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeCitiesPopupOutside(e) {
+    if (e.target === document.getElementById('cities-modal')) closeCitiesPopup();
+  }
+  function filterCities(q) {
+    const tags = document.querySelectorAll('#cities-grid .city-tag');
+    const lq = q.toLowerCase().trim();
+    tags.forEach(t => {
+      t.style.display = !lq || t.textContent.toLowerCase().includes(lq) ? '' : 'none';
+    });
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeCitiesPopup();
+  });
 </script>
 </body>
 
