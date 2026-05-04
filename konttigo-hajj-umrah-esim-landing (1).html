@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Premium eSIM for Hajj & Umrah 2026 | Konttigo</title>
+  <meta name="description" content="Stay connected during Hajj & Umrah 2026 with Konttigo's Saudi Arabia eSIM. Get 1GB FREE for 7 days or Unlimited Data @ $7.50 + 5% Cashback. Instant activation.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      /* Colors */
+      --primary: #065F46;
+      --primary-light: #10B981;
+      --primary-dark: #022C22;
+      --accent: #D97706;
+      --accent-light: #FBBF24;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --text-soft: #475569;
+      --border: #E2E8F0;
+      
+      /* Shadows */
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6, .brand-font {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    .announce-bar {
+      background: var(--primary-dark);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .announce-bar span {
+      background: var(--accent);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      margin: 0 6px;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: sticky;
+      top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-soft);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-cta:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 80px 0 100px;
+      background: linear-gradient(180deg, #F0FDF4 0%, var(--bg) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute; right: -10%; top: -10%; width: 50vw; height: 50vw;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 60%); border-radius: 50%;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(217, 119, 6, 0.1);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+      border: 1px solid rgba(217, 119, 6, 0.2);
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-soft);
+      margin-bottom: 40px;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+    }
+    .btn-primary {
+      background: var(--primary); color: white; padding: 16px 32px; border-radius: 100px;
+      font-weight: 600; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px;
+      transition: all 0.2s; box-shadow: var(--shadow-md);
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .btn-outline {
+      background: var(--surface); color: var(--text); padding: 16px 32px; border-radius: 100px;
+      font-weight: 600; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid var(--border); transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--text); background: var(--bg); }
+
+    .hero-visual { position: relative; }
+    .hero-card {
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(255,255,255,0.5);
+      position: relative;
+    }
+    .hero-card::before {
+      content: ''; position: absolute; inset: 0; border-radius: 24px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .trust-inner {
+      display: flex; justify-content: center; align-items: center; gap: 64px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px; color: var(--text-soft); font-weight: 500; font-size: 0.95rem;
+    }
+    .trust-icon { color: var(--primary-light); }
+
+    /* ===== FEATURES ===== */
+    .section { padding: 100px 0; }
+    .section-head { text-align: center; margin-bottom: 64px; max-width: 600px; margin-inline: auto; }
+    .section-head h2 { font-size: 2.5rem; font-weight: 700; color: var(--text); margin-bottom: 16px; letter-spacing: -0.5px; }
+    .section-head p { font-size: 1.1rem; color: var(--text-soft); }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .feature-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 40px;
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+    .icon-box {
+      width: 64px; height: 64px; background: #F0FDF4; color: var(--primary); border-radius: 16px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
+    }
+    .feature-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .feature-card p { color: var(--text-soft); line-height: 1.6; }
+
+    /* ===== PRICING ===== */
+    .pricing-bg { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 900px; margin: 0 auto; }
+    
+    .plan-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 32px; padding: 48px;
+      position: relative; transition: all 0.3s;
+    }
+    .plan-card:hover { border-color: var(--primary-light); box-shadow: var(--shadow-lg); }
+    .plan-card.pro {
+      background: var(--primary-dark); color: white; border: none; box-shadow: var(--shadow-xl);
+    }
+    .plan-badge {
+      position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+      background: var(--accent); color: white; padding: 6px 16px; border-radius: 100px;
+      font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .plan-name { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; }
+    .plan-card:not(.pro) .plan-name { color: var(--text-soft); }
+    .plan-price { font-size: 3.5rem; font-weight: 800; line-height: 1; margin-bottom: 32px; font-family: 'Outfit'; }
+    .plan-card:not(.pro) .plan-price { color: var(--text); }
+    
+    .plan-list { margin-bottom: 40px; }
+    .plan-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-weight: 500; }
+    .plan-card:not(.pro) .plan-list li { color: var(--text-soft); }
+    .plan-card.pro .plan-list li { color: rgba(255,255,255,0.9); }
+    .plan-list i { color: var(--primary-light); }
+    .plan-card.pro .plan-list i { color: var(--accent-light); }
+    
+    .btn-plan {
+      width: 100%; padding: 18px; border-radius: 100px; font-weight: 600; font-size: 1.05rem;
+      text-align: center; display: block; transition: all 0.2s;
+    }
+    .btn-plan-outline { border: 2px solid var(--text); color: var(--text); }
+    .btn-plan-outline:hover { background: var(--text); color: white; }
+    .btn-plan-solid { background: var(--accent); color: white; border: none; }
+    .btn-plan-solid:hover { background: #B45309; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--bg); padding: 60px 0 32px; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+    .footer-links-list { display: flex; flex-direction: column; gap: 12px; }
+    .footer-links-list a { color: var(--text-soft); font-size: 0.95rem; transition: color 0.2s; }
+    .footer-links-list a:hover { color: var(--primary); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 32px; display: flex; justify-content: space-between; color: var(--text-soft); font-size: 0.85rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { text-align: center; padding: 40px 0; }
+      .hero p { margin: 0 auto 40px; }
+      .hero-btns { justify-content: center; }
+      .trust-inner { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announce-bar">
+    Hajj & Umrah 2026 Special: <span>1GB FREE</span> Valid for 7 Days. No hidden fees.
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">
+        <i data-lucide="scan-line" style="color: var(--primary);"></i>
+        Konttigo<span>.</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#" class="nav-cta">Download App</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-pill">
+          <i data-lucide="star" style="width: 14px;"></i> Top Rated eSIM for Pilgrims
+        </div>
+        <h1>
+          Seamless Connectivity for <span>Hajj & Umrah</span>
+        </h1>
+        <p>Arrive in Saudi Arabia perfectly connected. No physical SIMs, no queuing for fingerprint registration. Pure digital convenience for your sacred journey.</p>
+        
+        <div class="hero-btns">
+          <a href="#pricing" class="btn-primary">
+            Get your eSIM <i data-lucide="arrow-right" style="width: 18px;"></i>
+          </a>
+          <a href="#features" class="btn-outline">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+            <i data-lucide="wifi" style="width: 32px; height: 32px; color: var(--primary);"></i>
+            <span style="background: rgba(16, 185, 129, 0.1); color: var(--primary); padding: 6px 12px; border-radius: 100px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">ACTIVE PLAN</span>
+          </div>
+          <div style="font-family: 'Outfit'; font-size: 1.25rem; font-weight: 500; color: var(--text-soft); margin-bottom: 8px;">Saudi Arabia</div>
+          <div style="font-family: 'Outfit'; font-size: 3rem; font-weight: 800; color: var(--text); margin-bottom: 32px; line-height: 1;">Unlimited Data</div>
+          
+          <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 24px;">
+            <div>
+              <div style="font-size: 0.85rem; color: var(--text-soft); font-weight: 500; margin-bottom: 4px;">Supported Networks</div>
+              <div style="font-weight: 600; color: var(--text);">STC, Mobily, Zain</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 0.85rem; color: var(--text-soft); font-weight: 500; margin-bottom: 4px;">Max Speed</div>
+              <div style="font-weight: 600; color: var(--text);">5G / 4G LTE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item"><i data-lucide="shield-check" class="trust-icon"></i> Secure Checkout</div>
+      <div class="trust-item"><i data-lucide="zap" class="trust-icon"></i> Instant Email Delivery</div>
+      <div class="trust-item"><i data-lucide="fingerprint" class="trust-icon"></i> No Biometrics Required</div>
+      <div class="trust-item"><i data-lucide="globe" class="trust-icon"></i> Works across 17 Countries</div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Designed for the Modern Pilgrim</h2>
+        <p>Focus on your prayers and rituals. Leave the internet connectivity to us with a flawless digital experience.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="icon-box"><i data-lucide="smartphone" style="width: 32px; height: 32px;"></i></div>
+          <h3>Scan & Connect</h3>
+          <p>Purchase online and receive a QR code via email instantly. Scan it with your phone and you are connected before you even land in Jeddah.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="icon-box" style="background: rgba(217,119,6,0.1); color: var(--accent);"><i data-lucide="user-x" style="width: 32px; height: 32px;"></i></div>
+          <h3>Skip the Queues</h3>
+          <p>Buying a physical SIM in Saudi Arabia requires passport scanning and fingerprinting. Konttigo eSIM bypasses all of this seamlessly.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-box"><i data-lucide="map-pin" style="width: 32px; height: 32px;"></i></div>
+          <h3>Full Haram Coverage</h3>
+          <p>We partner with STC and Mobily to guarantee you have a strong signal inside the Masjid al-Haram, Masjid an-Nabawi, and all holy sites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section pricing-bg">
+    <div class="container">
+      <div class="section-head">
+        <h2>Transparent Pricing, No Surprises</h2>
+        <p>Choose a plan that fits the duration of your stay. Top up anytime using the Konttigo App.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Starter Plan -->
+        <div class="plan-card">
+          <div class="plan-name">Pilgrim Starter</div>
+          <div class="plan-price">Free</div>
+          
+          <ul class="plan-list">
+            <li><i data-lucide="check-circle"></i> 1 GB Premium Data</li>
+            <li><i data-lucide="check-circle"></i> Valid for 7 Days</li>
+            <li><i data-lucide="check-circle"></i> Makkah & Madinah Coverage</li>
+            <li><i data-lucide="check-circle"></i> 24/7 WhatsApp Support</li>
+          </ul>
+
+          <a href="#" class="btn-plan btn-plan-outline">Claim Free eSIM</a>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="plan-card pro">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-name" style="color: rgba(255,255,255,0.8);">Unlimited Pilgrim</div>
+          <div class="plan-price">$7.50</div>
+          
+          <ul class="plan-list">
+            <li><i data-lucide="check-circle"></i> Unlimited Data Access</li>
+            <li><i data-lucide="check-circle"></i> Valid for 30 Days</li>
+            <li><i data-lucide="check-circle"></i> + 5% Wallet Cashback</li>
+            <li><i data-lucide="check-circle"></i> Hotspot Tethering Allowed</li>
+          </ul>
+
+          <a href="#" class="btn-plan btn-plan-solid">Purchase Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="logo" style="margin-bottom: 16px;">
+            Konttigo<span>.</span>
+          </div>
+          <p style="color: var(--text-soft); max-width: 300px;">The smartest way for pilgrims to stay connected globally without roaming fees.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Plans</h4>
+          <div class="footer-links-list">
+            <a href="#">Saudi Arabia eSIM</a>
+            <a href="#">Middle East Regional</a>
+            <a href="#">Global Plans</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links-list">
+            <a href="#">Help Center</a>
+            <a href="#">Device Compatibility</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <div class="footer-links-list">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 Konttigo. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#"><i data-lucide="twitter" style="width: 18px;"></i></a>
+          <a href="#"><i data-lucide="instagram" style="width: 18px;"></i></a>
+          <a href="#"><i data-lucide="facebook" style="width: 18px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
